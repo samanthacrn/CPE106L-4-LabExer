@@ -1,0 +1,17 @@
+vboxuser@Ubuntu22:~$ python3 login.py
+python3: can't open file '/home/vboxuser/login.py': [Errno 2] No such file or directory
+vboxuser@Ubuntu22:~$ /home/vboxuser/Eventlink
+bash: /home/vboxuser/Eventlink: No such file or directory
+vboxuser@Ubuntu22:~$ python3 -m venv eventlink
+vboxuser@Ubuntu22:~$ source eventlink/bin/activate
+(eventlink) vboxuser@Ubuntu22:~$ python3 login.py
+python3: can't open file '/home/vboxuser/login.py': [Errno 2] No such file or directory
+(eventlink) vboxuser@Ubuntu22:~$ ls
+Desktop    Downloads  EventLink  Pictures  snap       Videos
+Documents  eventlink  Music      Public    Templates
+(eventlink) vboxuser@Ubuntu22:~$ cd /EventLink
+bash: cd: /EventLink: No such file or directory
+(eventlink) vboxuser@Ubuntu22:~$ cd /home/vboxuser/Eventlink
+bash: cd: /home/vboxuser/Eventlink: No such file or directory
+(eventlink) vboxuser@Ubuntu22:~$ ^C
+(eventlink) vboxuser@Ubuntu22:~$ 
