@@ -1,9 +1,3 @@
-vboxuser@Ubuntu22:~$ python3 login.py
-python3: can't open file '/home/vboxuser/login.py': [Errno 2] No such file or directory
-vboxuser@Ubuntu22:~$ /home/vboxuser/Eventlink
-bash: /home/vboxuser/Eventlink: No such file or directory
-vboxuser@Ubuntu22:~$ python3 -m venv eventlink
-vboxuser@Ubuntu22:~$ source eventlink/bin/activate
 (eventlink) vboxuser@Ubuntu22:~$ python3 login.py
 python3: can't open file '/home/vboxuser/login.py': [Errno 2] No such file or directory
 (eventlink) vboxuser@Ubuntu22:~$ ls
@@ -14,4 +8,47 @@ bash: cd: /EventLink: No such file or directory
 (eventlink) vboxuser@Ubuntu22:~$ cd /home/vboxuser/Eventlink
 bash: cd: /home/vboxuser/Eventlink: No such file or directory
 (eventlink) vboxuser@Ubuntu22:~$ ^C
-(eventlink) vboxuser@Ubuntu22:~$ 
+(eventlink) vboxuser@Ubuntu22:~$ cd ~/EventLink
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ ls
+env        EventLink   homepg.py  __pycache__  server.py  test_app.py
+eventlink  exlogo.png  login.py   README.md    signup.py  user_profile.py
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ python3 login.py
+Traceback (most recent call last):
+  File "/home/vboxuser/EventLink/login.py", line 1, in <module>
+    import flet as ft
+ModuleNotFoundError: No module named 'flet'
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ pip install flet
+Collecting flet
+  Using cached flet-0.26.0-py3-none-any.whl (535 kB)
+Collecting oauthlib<4.0.0,>=3.2.2
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Collecting repath<0.10.0,>=0.9.0
+  Using cached repath-0.9.0-py3-none-any.whl (4.7 kB)
+Collecting httpx
+  Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Collecting six>=1.9.0
+  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting certifi
+  Using cached certifi-2025.1.31-py3-none-any.whl (166 kB)
+Collecting anyio
+  Using cached anyio-4.8.0-py3-none-any.whl (96 kB)
+Collecting idna
+  Using cached idna-3.10-py3-none-any.whl (70 kB)
+Collecting httpcore==1.*
+  Using cached httpcore-1.0.7-py3-none-any.whl (78 kB)
+Collecting h11<0.15,>=0.13
+  Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Collecting typing_extensions>=4.5
+  Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Collecting sniffio>=1.1
+  Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Collecting exceptiongroup>=1.0.2
+  Using cached exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Installing collected packages: typing_extensions, sniffio, six, oauthlib, idna, h11, exceptiongroup, certifi, repath, httpcore, anyio, httpx, flet
+Successfully installed anyio-4.8.0 certifi-2025.1.31 exceptiongroup-1.2.2 flet-0.26.0 h11-0.14.0 httpcore-1.0.7 httpx-0.28.1 idna-3.10 oauthlib-3.2.2 repath-0.9.0 six-1.17.0 sniffio-1.3.1 typing_extensions-4.12.2
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ python login.py
+Installing flet-desktop 0.26.0 package...OK
+/home/vboxuser/.flet/bin/flet-0.26.0/flet/flet: error while loading shared libraries: libmpv.so.1: cannot open shared object file: No such file or directory
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ python3 login.py
+/home/vboxuser/.flet/bin/flet-0.26.0/flet/flet: error while loading shared libraries: libmpv.so.1: cannot open shared object file: No such file or directory
+(eventlink) vboxuser@Ubuntu22:~/EventLink$ 
